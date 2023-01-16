@@ -299,4 +299,119 @@ Ya vimos como hacer un script, pero solo ejecuta una tarea, que tal si intentamo
 
 ## NPX
 __Node Package Execute (NPX)__ nos permite ejecutar acciones particulares sin tener que pasar por la instalación dentro de nuestro ordenador.
-- Para fines educativos se hara un pequeño ejemplo de instalar la librería de React
+- Para fines educativos se hara un pequeño ejemplo de instalar la librería de React:
+- Salimos de nuestra carpeta _primeros-pasos_ y creamos una nueva carpeta con _npx_:
+    ```bash
+    npx create-react-app my-first-app
+    ```
+- Escribimos "y" cuando nos pregunte en consola si deseamos instalarlo y esperamos la instalación
+- Nos vamos a la carpeta _my-first-app_:
+```bash
+cd my-first-app
+```
+- Iniciamos el servidor de React:
+```bash
+npm start
+```
+
+## Actualización de Dependencias
+Para fines educativos utilizaremos el siguiente [repositorio](https://github.com/gndx/react-base.git) para practicar
+- Nos vamos a nuestra escritorio y creamos una nueva carpeta _practicas-updates-npm_, con la terminal nos movemos a esa carpeta y ejecutamos los siguiente comandos:
+```bash
+cd practicas-updates-npm
+```
+```bash
+git clone https://github.com/gndx/react-base.git
+```
+```bash
+mkdir react-base
+```
+Ahora veremos las dependencias de este proyecto:
+```bash
+npm list
+```
+Nos lanzará un mensaje de error, esto ocurre porque no tenemos las dependencias instaladas en nuestro ordenador, para eso ejecutamos el siguiente comando:
+```bash
+npm install
+```
+Ahora veremos si podremos ver la lsita de dependencias, pero eso no nos dice mucho de que tenemos que hacer, entonce podemos ejecutar este comando que nos indica que estamos instalando y que version deberiamos de tener para este proyecto:
+```bash
+npm outdate
+```
+
+<div align="center">
+    <img src="./imgs/npm-outdate.PNG">
+</div>
+Para actualizar un paquete usamos lo que vimos anteriormente:
+
+```bash
+npm install react@latest
+```
+Al instalar a la ultima version nos dara un mensaje de error, porque hay otras dependencias que deben de ser actualizadas antes que _react_:
+
+<div align="center">
+    <img src="./imgs/error-npm-update.PNG">
+</div>
+
+En este caso _react-dom_ dice que se debe de actualizar primero, entonces procedemos a realizarlo:
+
+```bash
+npm install react-dom@latest
+```
+Y ahora no nos dio ningun error, sin embargo aun tenemos varias cosas por actualizar...
+
+<div align="center">
+    <img src="./imgs/success-npm-update.PNG">
+</div>
+
+En la imagen que se mostro anteriormente dice que se pueden arreglar algunos de esos errores, pero veremos cuales son, con el sisguiente comando podremos ver cuales son los errores de las dependencias:
+
+```bash
+npm audit
+```
+Lanzara mucha información:
+<div align="center">
+    <img src="./imgs/npm-audit.PNG">
+</div>
+Ahora ¿Como lo arreglamos?, al final de todo ese mensaje nos da otra ayuda que dice que el programa intentara arreglar esos errores de manera automatica:
+```bash
+npm audit fix
+```
+Te daras cuenta que al final nos dice que quedan menos errores para corregir, significa que si funciono en algunas cosas.
+<div align="center">
+    <img src="./imgs/npm-audit-fix.PNG">
+</div>
+Pero aun quedan varias vulnerabilidades, entonces eso podria ser porque algunas dependencias tienen paquetes muy por debajo para actualizar, por lo que podremos usar otro comando que nos dice en la terminal:
+```bash
+npm audit fix --force
+```
+Este forzara a corregir más errores, pero en la imagen de abajo podemos ver que dice que algunos paquetes deberan ser actualizados manualmente:
+<div align="center">
+    <img src="./imgs/npm-install-webpack.PNG">
+</div>
+En este caso listamos las dependencias y vemos webpack
+
+```bash
+npm list
+```
+Podremos ver que son 3 dependencias
+<div align="center">
+    <img src="./imgs/list-npm.PNG">
+</div>
+
+Entonces actualizamos webpack
+```bash
+npm install webpack@latest
+```
+<div align="center">
+    <img src="./imgs/update-webpack.PNG">
+</div>
+Luego con webpack-dev-server:
+
+```bash
+npm install webpack-dev-server@latest
+```
+Podemos ver que ya no tenemos vulnerabilidades o conflictos en todas las dependencias:
+<div align="center">
+    <img src="./imgs/update-webpack-server.PNG">
+</div>
