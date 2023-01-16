@@ -228,3 +228,28 @@ cowsay hola a todos
     <pre>cowsay -f ghostbusters "En tu computadora hay fantasmas..."</pre>
     <pre>cowsay -f elephant "Soy el animal mas grande sobre la tierra"</pre>
     <pre>cowsay -f vader YO SOY TU PADRE</pre>
+## Instalando dependencias de versiones específicas
+<br>
+
+### Dependencias opcionales
+```bash
+npm install eslint -o
+```
+
+### Validar Dependencias
+Esta instrucción solo verificara si existe algun error al instalarla, solo hace una simulación de instalación para ver que todo este Ok, mas no se instala.
+```bash
+npm install react-dom --dry-run
+```
+### Instalar una versión específica de un paquete
+```bash
+npm install json-server@0.15.0
+```
+### Instalar la ultima versión de un paquete
+```bash
+npm install json-server@latest
+```
+### Instalar dependencias para proyectos clonados
+```bash
+npm install
+```
