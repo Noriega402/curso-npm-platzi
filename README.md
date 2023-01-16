@@ -64,3 +64,52 @@ Nos mostrara una lista de comandos para poder utilizar similar a la siguiente im
 <div align="center">
     <img src="./imgs/console-nvm.PNG">
 </div>
+
+Ahora viene la parte interesante en donde tendremos que instalar alguna version de Node, para eso primero veremos las versiones disponibles mediante la consola con el isguiente comando:
+```bash
+nvm list available
+```
+
+Nos deplegara una tabla con la informacion de las versiones disponibles para trabajar con Node JS
+<div align="center">
+    <img src="./imgs/list-available.PNG">
+</div>
+
+#### Instalacion de ultima version con nvm
+Ya que vimos las versiones disponibles mediante la consola podemos ejecutar la siguiente instruccion por medio de la consola:
+```bash
+nvm install 18.10.0
+```
+El comando anterior indica que nvm realizara la instalacion de la version 18.10.0, nos dimos cuenta que elegimos una versión en específico, pero...
+
+¿Qué pasa cuando queremos instalar la ultima versión?, sencillo... Utilizamos el siguiente comando:
+```bash
+nvm install latest
+```
+¿Y si queremos la version LTS? es similar al anterior:
+```bash
+nvm install lts
+```
+### Listar las versiones de Node
+Si tenemos instalado _nvm_ podemos ver las diferenctes versiones de Node que tenemos instaladas:
+```bash
+nvm ls
+```
+```bash
+nvm list
+```
+### Cambiar de versiones con nvm
+Supongamos que instalamos 4 versiones de Node y la que esta en uso es la ultima version, pero por cuestiones de compatibilidad u otras cosas tenemos que cambiar a unas versiones anteriores, de que manera la hacemos?
+<pre>nvm use numeroDeVersion</pre>
+- Ejemplo
+    ```bash
+    nvm use 18.6.0
+    ```
+¿Como saber que cambiamos de versión?
+```bash
+nvm list
+```
+nos mostrar un asterisco en la version que el sistema esta utilizando como en la imagen que se muestra a continuación:
+<div align="center">
+    <img src="./imgs/use-version.PNG">
+</div>
