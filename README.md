@@ -113,3 +113,10 @@ nos mostrar un asterisco en la version que el sistema esta utilizando como en la
 <div align="center">
     <img src="./imgs/use-version.PNG">
 </div>
+
+### Desinstalar versiones de node con nvm
+Hay casos en donde ya no utilizaremos algunas versiones de Node, resulta que tambien podemos eliminar las versiones de Node que tenemos instaladas en nuestra máquina:
+<pre>nvm uninstall numeroDeVersion</pre>
+```bash
+nvm uninstall 18.6.0
+```
