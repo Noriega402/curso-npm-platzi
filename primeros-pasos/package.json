@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "saludar":"node ./src/index.js"
+    "saludar":"node ./src/index.js",
+    "actions":"node ./src/index.js && echo \"Realizando otra accion en un mismo comando\" "
   },
   "repository": {
     "type": "git",
