@@ -1,0 +1,27 @@
+{
+  "name": "curso-npm-platzi",
+  "description": "Aprendiendo npm y dependencias de js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noriega402/curso-npm-platzi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noriega402/curso-npm-platzi/issues"
+  },
+  "homepage": "https://github.com/Noriega402/curso-npm-platzi#readme",
+  "dependencies": {
+    "moment": "^2.29.4",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0"
+  }
+}
