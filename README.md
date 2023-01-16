@@ -253,3 +253,50 @@ npm install json-server@latest
 ```bash
 npm install
 ```
+
+## Crear Scripts personalizados con npm
+- Crearemos una carpeta nueva:
+    ```bash
+    mkdir src
+    ```
+- Creamos un archivo _index.js_:
+    ```bash
+    touch ./src/index.js
+    ```
+- Seleccionamos nuestro archivo _index.js_ y escribimos:
+    ```javascript
+    console.log('Hello World!');
+    ```
+- Nos dirigimos al archivo _package.json_ y en la parte de _scripts_ colocamos lo siguiente:
+    ```json
+        "saludar":"node ./src/index.js"
+    ```
+Nos quedaria de esta manera:
+
+<div align="center">
+    <img src="./imgs/scripts.PNG">
+</div>
+
+Par probar nuestro primer script personalizado nos vamos a nuestra terminal al inicio de nuestra carpeta _primeros-pasos_ y ejecutamos el comando:
+```bash
+npm run saludar
+```
+
+<div align="center">
+    <img src="./imgs/run-saludar.PNG">
+</div>
+
+### Hacer varias acciones en un mismo comando
+Ya vimos como hacer un script, pero solo ejecuta una tarea, que tal si intentamos hacer un script que realiza más de una tarea:
+- En nuestro _package.json_ crearemos un nuevo script:
+    ```json
+    "actions":"node ./src/index.js && echo \"Realizando otra accion en un mismo comando"\"
+    ```
+
+<div align="center">
+    <img src="./imgs/script-master.PNG">
+</div>
+
+## NPX
+__Node Package Execute (NPX)__ nos permite ejecutar acciones particulares sin tener que pasar por la instalación dentro de nuestro ordenador.
+- Para fines educativos se hara un pequeño ejemplo de instalar la librería de React
