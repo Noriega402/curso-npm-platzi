@@ -415,3 +415,35 @@ Podemos ver que ya no tenemos vulnerabilidades o conflictos en todas las depende
 <div align="center">
     <img src="./imgs/update-webpack-server.PNG">
 </div>
+
+## Eliminación de Dependencias y Package lock
+En la carpeta de _react-base_ usamos el siguiente comando para poder desintalar las siguientes dependencias:
+```bash
+npm uninstall webpack-dev-server
+```
+
+O tambien podemos hacerlo desde el archivo _package.json_ eliminando los nombres de las dependencias que no queremos, luego de eso ejecutar el siguiente comando en la terminal:
+## Eliminar node_modules
+```bash
+npm -rf node_modules
+```
+
+El comando de arriba se encarga de eliminar la carpeta completa de _node_modules_ y asi poder deshacernos de esos paquetes que eliminamos del _package.json_, luego usamos el comando para instalar de nuevo los paquetes:
+```bash
+npm install
+```
+
+### Preparar proyecto para producción
+Ejecutamos el comando:
+```bash
+npm run build
+```
+En caso querramos mas información de que es lo que se esta realizando podemos usar el siguiente comando:
+```bash
+npm run build --dd
+```
+
+### Ver las librerias deprecadas
+```bash
+npm ci
+```
